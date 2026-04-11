@@ -107,6 +107,7 @@
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            overflow: visible;
         }
         .nav-inner {
             max-width: 1200px;
@@ -115,6 +116,7 @@
             align-items: center;
             gap: 4px;
             overflow-x: auto;
+            overflow-y: visible;
             scrollbar-width: none;
         }
         .nav-logo {
@@ -132,13 +134,12 @@
             z-index: 10;
         }
         .nav-logo img {
-            width: 130px;
-            height: 130px;
-            border-radius: 18px;
+            width: 92px;
+            height: 92px;
+            border-radius: 16px;
             object-fit: cover;
             position: relative;
-            top: 50%;
-            transform: translateY(-50%);
+            top: -4px;
             filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
         }
         .nav-logo.visible {
@@ -731,7 +732,7 @@
             /* Nav */
             .nav-bar { padding: 0 8px; }
             .nav-link { padding: 12px 12px; font-size: 0.78rem; }
-            .nav-logo img { width: 100px; height: 100px; border-radius: 14px; }
+            .nav-logo img { width: 72px; height: 72px; border-radius: 12px; }
             .nav-logo { height: 36px; margin-right: 8px; }
             .nav-logo.visible { width: 54px; }
 
