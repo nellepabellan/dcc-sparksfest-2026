@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCC SparksFest 2026 - Detailed Program Plan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+
+        :root {
+            --gold: #C8A23C;
+            --gold-light: #E8D48B;
+            --gold-dark: #9A7B2E;
+            --dark: #1A1A2E;
+            --dark-alt: #16213E;
+            --accent-blue: #0F3460;
+            --accent-red: #E94560;
+            --white: #FFFFFF;
+            --gray-50: #F8F9FA;
+            --gray-100: #F0F1F3;
+            --gray-200: #E1E3E6;
+            --gray-300: #C4C8CC;
+            --gray-500: #6B7280;
+            --gray-700: #374151;
+            --gray-900: #111827;
+            --booth-color: #D4A017;
+            --fixit-color: #E94560;
+            --pitch-color: #0F3460;
+            --infogold-color: #7B2D8E;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-900);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-alt) 50%, var(--accent-blue) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 20px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(200,162,60,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 50%, rgba(233,69,96,0.08) 0%, transparent 50%);
+            animation: shimmer 15s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-5%, 5%); }
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+        .hero-logo { width: 180px; height: 180px; margin: 0 auto 24px; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(200,162,60,0.3); }
+        .hero-logo img { width: 100%; height: 100%; object-fit: cover; }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero .subtitle {
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.9);
+        }
+        .hero-meta .icon { font-size: 1.2rem; }
+
+        /* ===== NAVIGATION ===== */
+        .nav-bar {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .nav-inner::-webkit-scrollbar { display: none; }
+        .nav-link {
+            padding: 14px 18px;
+            text-decoration: none;
+            color: var(--gray-500);
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+        .nav-link:hover { color: var(--gold-dark); border-bottom-color: var(--gold); }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 60px 0;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        .section-header p {
+            font-size: 1.05rem;
+            color: var(--gray-500);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+            border-radius: 2px;
+            margin: 16px auto;
+        }
+
+        /* ===== EVENT OVERVIEW CARDS ===== */
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .event-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--gray-100);
+        }
+        .event-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+        .event-card-header {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .event-card-header img { width: 100px; height: 100px; border-radius: 16px; margin-bottom: 12px; object-fit: cover; }
+        .event-card-header h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+        .event-card-header .tagline { font-size: 0.85rem; color: var(--gray-500); font-style: italic; }
+        .event-card-body { padding: 0 20px 20px; }
+        .event-card-body .detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.88rem;
+        }
+        .event-card-body .detail .label { font-weight: 600; color: var(--gray-700); min-width: 80px; }
+        .event-card-body .detail .value { color: var(--gray-500); }
+        .event-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--white);
+        }
+        .badge-booth { background: var(--booth-color); }
+        .badge-fixit { background: var(--fixit-color); }
+        .badge-pitch { background: var(--pitch-color); }
+        .badge-infogold { background: var(--infogold-color); }
+
+        /* ===== TIMELINE / PROGRAM ===== */
+        .day-tab-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 36px;
+        }
+        .day-tab {
+            padding: 12px 32px;
+            border: 2px solid var(--gold);
+            background: transparent;
+            color: var(--gold-dark);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .day-tab.active, .day-tab:hover { background: var(--gold); color: var(--white); }
+        .day-program { display: none; }
+        .day-program.active { display: block; }
+
+        .timeline { position: relative; padding-left: 40px; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--gold), var(--gold-light), var(--gold));
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 24px;
+            padding: 20px 24px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            border: 1px solid var(--gray-100);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 24px;
+            width: 14px;
+            height: 14px;
+            background: var(--gold);
+            border: 3px solid var(--white);
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(200,162,60,0.4);
+        }
+        .timeline-time {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .timeline-title { font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+        .timeline-desc { font-size: 0.9rem; color: var(--gray-500); }
+        .timeline-desc ul { margin-left: 20px; margin-top: 6px; }
+        .timeline-desc li { margin-bottom: 4px; }
+
+        /* ===== JUDGES SECTION ===== */
+        .judges-summary {
+            background: linear-gradient(135deg, var(--dark), var(--accent-blue));
+            color: var(--white);
+            border-radius: 20px;
+            padding: 48px 40px;
+            margin-bottom: 40px;
+        }
+        .judges-summary h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        .judges-summary .total-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+        .judges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .judge-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .judge-card h4 { font-size: 1rem; margin-bottom: 4px; color: var(--gold-light); }
+        .judge-card .count {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+        .judge-card p { font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
+
+        .judge-breakdown-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+        .judge-breakdown-table th {
+            background: var(--dark);
+            color: var(--gold-light);
+            padding: 14px 18px;
+            text-align: left;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .judge-breakdown-table td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 0.9rem;
+        }
+        .judge-breakdown-table tr:last-child td { border-bottom: none; }
+        .judge-breakdown-table tr:hover td { background: var(--gray-50); }
+
+        /* ===== GRASPS SECTION ===== */
+        .grasps-section { background: var(--white); }
+
+        .grasps-intro {
+            background: linear-gradient(135deg, var(--fixit-color), #FF6B81);
+            color: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .grasps-intro h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 12px; }
+        .grasps-intro p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+
+        .grasps-acronym {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin: 24px auto;
+            max-width: 900px;
+        }
+        .grasps-letter {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 14px 12px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .grasps-letter .letter {
+            font-size: 1.5rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .grasps-letter .meaning { font-size: 0.78rem; opacity: 0.9; }
+
+        .grade-tab-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        .grade-tab {
+            padding: 10px 24px;
+            border: 2px solid var(--fixit-color);
+            background: transparent;
+            color: var(--fixit-color);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .grade-tab.active, .grade-tab:hover {
+            background: var(--fixit-color);
+            color: var(--white);
+        }
+
+        .grade-problems { display: none; }
+        .grade-problems.active { display: block; }
+
+        .problem-card {
+            background: var(--gray-50);
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--fixit-color);
+            transition: box-shadow 0.2s;
+        }
+        .problem-card:hover { box-shadow: 0 4px 20px rgba(233,69,96,0.12); }
+        .problem-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--fixit-color);
+            color: var(--white);
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+        .problem-title { font-size: 1.15rem; font-weight: 700; color: var(--dark); margin-bottom: 14px; }
+        .grasps-detail {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+        .grasps-row {
+            display: flex;
+            gap: 12px;
+            font-size: 0.88rem;
+            padding: 6px 0;
+        }
+        .grasps-row .g-label {
+            min-width: 110px;
+            font-weight: 700;
+            color: var(--fixit-color);
+            flex-shrink: 0;
+        }
+        .grasps-row .g-value { color: var(--gray-700); }
+
+        /* ===== RUBRICS ===== */
+        .rubric-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .rubric-card {
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            overflow: hidden;
+            border: 1px solid var(--gray-100);
+        }
+        .rubric-card-header {
+            padding: 20px;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .rubric-card-header img { width: 48px; height: 48px; border-radius: 10px; }
+        .rubric-card-header h4 { font-size: 1rem; }
+        .rubric-card-header.booth { background: var(--booth-color); }
+        .rubric-card-header.fixit { background: var(--fixit-color); }
+        .rubric-card-header.pitch { background: var(--pitch-color); }
+        .rubric-card-header.infogold { background: var(--infogold-color); }
+        .rubric-table { width: 100%; border-collapse: collapse; }
+        .rubric-table th {
+            text-align: left;
+            padding: 10px 16px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .rubric-table td {
+            padding: 10px 16px;
+            font-size: 0.88rem;
+            border-bottom: 1px solid var(--gray-50);
+        }
+        .rubric-table td:last-child { text-align: center; font-weight: 700; color: var(--gold-dark); }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .footer img { width: 60px; margin-bottom: 12px; border-radius: 10px; }
+        .footer p { font-size: 0.85rem; margin-bottom: 4px; }
+        .footer .footer-title { color: var(--gold-light); font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+
+        /* ===== PRINT ===== */
+        @media print {
+            .nav-bar { display: none; }
+            .hero { padding: 30px 20px; }
+            .section { padding: 30px 0; }
+            .day-program { display: block !important; }
+            .grade-problems { display: block !important; }
+            .event-card:hover, .problem-card:hover { transform: none; box-shadow: none; }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-meta { flex-direction: column; gap: 8px; align-items: center; }
+            .judges-summary { padding: 32px 24px; }
+            .grasps-intro { padding: 28px 20px; }
+            .timeline { padding-left: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-logo">
+            <img src="logos/sparksfest-main.png" alt="DCC SparksFest 2026 Logo">
+        </div>
+        <h1>DCC SparksFest 2026</h1>
+        <p class="subtitle">Innovation Culmination Programs &mdash; Detailed Program Plan</p>
+        <div class="hero-meta">
+            <span><span class="icon">&#128205;</span> DCC BED Campus, Rasay &amp; Sto. Cristo Sts., Toril, Davao City</span>
+            <span><span class="icon">&#128197;</span> April 14&ndash;15, 2026</span>
+            <span><span class="icon">&#127891;</span> Grades 1&ndash;12</span>
+        </div>
+    </div>
+</section>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="nav-bar">
+    <div class="nav-inner">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#program" class="nav-link">Program Flow</a>
+        <a href="#judges" class="nav-link">Judges</a>
+        <a href="#grasps" class="nav-link">GRASPS Questions</a>
+        <a href="#rubrics" class="nav-link">Rubrics</a>
+        <a href="#awards" class="nav-link">Awards</a>
+    </div>
+</nav>
+
+<!-- ========== EVENT OVERVIEW ========== -->
+<section id="overview" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Event Overview</h2>
+            <div class="section-divider"></div>
+            <p>A culminating innovation showcase featuring student-led build challenges, rapid problem-solving activities, and pitch presentations.</p>
+        </div>
+
+        <div class="event-grid">
+            <!-- Golden Booth Brawl -->
+            <div class="event-card">
+                <div class="event-card-header">
+                    <img src="logos/golden-booth.png" alt="Golden Booth Brawl">
+                    <span class="event-badge badge-booth">Booth Contest</span>
+                    <h3>Golden Booth Brawl</h3>
+                    <p class="tagline">Build It. Brand It.</p>
+                </div>
+                <div class="event-card-body">
+                    <div class="detail"><span class="label">Grades:</span><span class="value">1&ndash;12 (All Levels)</span></div>
+                    <div class="detail"><span class="label">Format:</span><span class="value">Booth selling + judging (2 days)</span></div>
+                    <div class="detail"><span class="label">Zones:</span><span class="value">Elementary, JHS, SHS</span></div>
+                    <div class="detail"><span class="label">Judges:</span><span class="value">3&ndash;7 judges</span></div>
+                    <div class="detail"><span class="label">Schedule:</span><span class="value">Day 1 &amp; 2 (selling), Day 1 PM (judging)</span></div>
+                </div>
+            </div>
+
+            <!-- Fix-It Fest -->
+            <div class="event-card">
+                <div class="event-card-header">
+                    <img src="logos/fix-it-fest.png" alt="Fix-It Fest">
+                    <span class="event-badge badge-fixit">Problem Solving</span>
+                    <h3>Fix-It Fest</h3>
+                    <p class="tagline">Small hands. Golden solutions.</p>
+                </div>
+                <div class="event-card-body">
+                    <div class="detail"><span class="label">Grades:</span><span class="value">1&ndash;6 (Elementary)</span></div>
+                    <div class="detail"><span class="label">Format:</span><span class="value">Team-based, 3 rounds per group</span></div>
+                    <div class="detail"><span class="label">Teams:</span><span class="value">5 members each (1 per section)</span></div>
+                    <div class="detail"><span class="label">Judges:</span><span class="value">3&ndash;5 judges</span></div>
+                    <div class="detail"><span class="label">Schedule:</span><span class="value">Day 1 (AM: Gr 1&ndash;3, PM: Gr 4&ndash;6)</span></div>
+                </div>
+            </div>
+
+            <!-- InnoPitch -->
+            <div class="event-card">
+                <div class="event-card-header">
+                    <img src="logos/innopitch.png" alt="DCCian InnoPitch">
+                    <span class="event-badge badge-pitch">Pitch Competition</span>
+                    <h3>DCCian InnoPitch</h3>
+                    <p class="tagline">The Golden Breakthrough</p>
+                </div>
+                <div class="event-card-body">
+                    <div class="detail"><span class="label">Grades:</span><span class="value">7&ndash;12 (JHS &amp; SHS)</span></div>
+                    <div class="detail"><span class="label">Format:</span><span class="value">Pitch deck + 5-min presentation</span></div>
+                    <div class="detail"><span class="label">Finalists:</span><span class="value">6 JHS + 6 SHS teams</span></div>
+                    <div class="detail"><span class="label">Judges:</span><span class="value">3&ndash;7 judges</span></div>
+                    <div class="detail"><span class="label">Schedule:</span><span class="value">Day 2 (AM: JHS, PM: SHS)</span></div>
+                </div>
+            </div>
+
+            <!-- InfoGold -->
+            <div class="event-card">
+                <div class="event-card-header">
+                    <img src="logos/infogold.png" alt="InfoGold">
+                    <span class="event-badge badge-infogold">Infographic Showcase</span>
+                    <h3>InfoGold</h3>
+                    <p class="tagline">Visualizing Innovation</p>
+                </div>
+                <div class="event-card-body">
+                    <div class="detail"><span class="label">Grades:</span><span class="value">7&ndash;12 (4 entries/section)</span></div>
+                    <div class="detail"><span class="label">Format:</span><span class="value">Gallery walk + optional judging</span></div>
+                    <div class="detail"><span class="label">Display:</span><span class="value">A3 or 20&times;30 in poster</span></div>
+                    <div class="detail"><span class="label">Judges:</span><span class="value">3&ndash;5 judges (optional, may share with Booth)</span></div>
+                    <div class="detail"><span class="label">Schedule:</span><span class="value">Day 1 PM (3:00&ndash;5:00)</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== DETAILED PROGRAM ========== -->
+<section id="program" class="section" style="background: var(--white);">
+    <div class="container">
+        <div class="section-header">
+            <h2>Detailed Program Flow</h2>
+            <div class="section-divider"></div>
+            <p>Two action-packed days of innovation, entrepreneurship, and creative problem-solving.</p>
+        </div>
+
+        <div class="day-tab-container">
+            <button class="day-tab active" onclick="switchDay(1)">Day 1 &mdash; April 14</button>
+            <button class="day-tab" onclick="switchDay(2)">Day 2 &mdash; April 15</button>
+        </div>
+
+        <!-- DAY 1 -->
+        <div id="day1" class="day-program active">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">8:00 AM</div>
+                    <div class="timeline-title">Registration &amp; Assembly</div>
+                    <div class="timeline-desc">All participants, faculty, and staff assemble at the main venue. Attendance check and area orientation.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">8:30 AM</div>
+                    <div class="timeline-title">Day 1 Opening Ceremony</div>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Opening Remarks</li>
+                            <li>Special Message</li>
+                            <li>Statement of the Purpose</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">9:00 AM</div>
+                    <div class="timeline-title">Booth Opening Ceremony</div>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Booth contest mechanics overview</li>
+                            <li>Presentation of Judges</li>
+                            <li>Sales officially open after this segment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">9:30 AM</div>
+                    <div class="timeline-title">Ad &amp; Sales Talk Segment</div>
+                    <div class="timeline-desc">
+                        Each booth (per program) delivers a 2-minute advertisement/pitch on stage. Ethical marketing reminders apply.
+                    </div>
+                </div>
+                <div class="timeline-item" style="border-left-color: var(--fixit-color);">
+                    <div class="timeline-time">10:00 AM &ndash; 12:00 PM</div>
+                    <div class="timeline-title">Fix-It Fest: Grades 1&ndash;3 <span class="event-badge badge-fixit" style="font-size:0.7rem; vertical-align:middle; margin-left:8px;">MORNING RUN</span></div>
+                    <div class="timeline-desc">
+                        6 teams compete in 3 GRASPS-aligned problem-solving rounds. Each round: 1-min prompt, 3-min brainstorm, 2-min presentations, scoring.
+                    </div>
+                </div>
+                <div class="timeline-item" style="border-left-color: var(--fixit-color);">
+                    <div class="timeline-time">1:00 PM &ndash; 3:00 PM</div>
+                    <div class="timeline-title">Fix-It Fest: Grades 4&ndash;6 <span class="event-badge badge-fixit" style="font-size:0.7rem; vertical-align:middle; margin-left:8px;">AFTERNOON RUN</span></div>
+                    <div class="timeline-desc">
+                        5 teams compete in 3 GRASPS-aligned problem-solving rounds. Same format as morning session.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">3:00 PM &ndash; 5:00 PM</div>
+                    <div class="timeline-title">Booth Judging Block (All Year Levels)</div>
+                    <div class="timeline-desc">
+                        Parallel judging streams:
+                        <ul>
+                            <li><strong>InfoGold:</strong> Visualizing Innovation &mdash; Gallery walk &amp; judging</li>
+                            <li><strong>Golden Booth Brawl:</strong> Most Innovative Booth Design + Best Innovative Product/Service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAY 2 -->
+        <div id="day2" class="day-program">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">8:00 AM</div>
+                    <div class="timeline-title">Registration &amp; Assembly</div>
+                    <div class="timeline-desc">Day 2 attendance, recap, and setup verification for booths and pitch areas.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">8:30 AM</div>
+                    <div class="timeline-title">Day 2 Opening Ceremony</div>
+                    <div class="timeline-desc">Welcome back, brief recap of Day 1 highlights, and orientation for Day 2 activities.</div>
+                </div>
+                <div class="timeline-item" style="border-left-color: var(--pitch-color);">
+                    <div class="timeline-time">10:00 AM &ndash; 12:00 PM</div>
+                    <div class="timeline-title">DCCian InnoPitch: JHS Finals <span class="event-badge badge-pitch" style="font-size:0.7rem; vertical-align:middle; margin-left:8px;">MORNING</span></div>
+                    <div class="timeline-desc">
+                        6 Junior High School finalist teams pitch their innovations. 5 minutes max per team + Q&amp;A.
+                    </div>
+                </div>
+                <div class="timeline-item" style="border-left-color: var(--pitch-color);">
+                    <div class="timeline-time">1:00 PM &ndash; 3:00 PM</div>
+                    <div class="timeline-title">DCCian InnoPitch: SHS Finals <span class="event-badge badge-pitch" style="font-size:0.7rem; vertical-align:middle; margin-left:8px;">AFTERNOON</span></div>
+                    <div class="timeline-desc">
+                        6 Senior High School finalist teams pitch their innovations. 5 minutes max per team + Q&amp;A.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">3:00 PM</div>
+                    <div class="timeline-title">Final Accounting &amp; Submission Window</div>
+                    <div class="timeline-desc">
+                        All booths finalize combined Day 1 + Day 2 sales/profit. <strong>Deadline: 4:00 PM.</strong> Finance summaries submitted to organizers.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">3:30 PM</div>
+                    <div class="timeline-title">Awarding Ceremony</div>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li><strong>1)</strong> Fix-It Fest Awards (Grades 1&ndash;6)</li>
+                            <li><strong>2)</strong> Booth Awards (Golden Booth Brawl categories)</li>
+                            <li><strong>3)</strong> InfoGold Awards</li>
+                            <li><strong>4)</strong> Pitch Awards (InnoPitch JHS &amp; SHS)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">4:30 PM</div>
+                    <div class="timeline-title">Closing Ceremony</div>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Closing remarks</li>
+                            <li>Acknowledgements</li>
+                            <li>Photo opportunity</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">5:00 PM</div>
+                    <div class="timeline-title">Egress</div>
+                    <div class="timeline-desc">Booth cleanup, venue reset, documentation wrap-up.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== JUDGES SECTION ========== -->
+<section id="judges" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Judging Panel Requirements</h2>
+            <div class="section-divider"></div>
+            <p>A detailed breakdown of judge requirements per event, including scheduling overlaps and recommendations.</p>
+        </div>
+
+        <div class="judges-summary">
+            <h3>Total Judges Needed</h3>
+            <div class="total-badge">Recommended: 12&ndash;19 Judges &nbsp;|&nbsp; Minimum (with reuse): 7&ndash;10 Judges</div>
+            <div class="judges-grid">
+                <div class="judge-card">
+                    <h4>Fix-It Fest</h4>
+                    <div class="count">3&ndash;5</div>
+                    <p>Day 1 only (10 AM&ndash;3 PM). Scores GRASPS-aligned presentations for Grades 1&ndash;6. Same panel for morning &amp; afternoon.</p>
+                </div>
+                <div class="judge-card">
+                    <h4>Golden Booth Brawl</h4>
+                    <div class="count">3&ndash;7</div>
+                    <p>Day 1 PM (3:00&ndash;5:00 PM). Visit booths across Elementary, JHS, and SHS zones. Score booth design &amp; product innovation.</p>
+                </div>
+                <div class="judge-card">
+                    <h4>InfoGold</h4>
+                    <div class="count">3&ndash;5</div>
+                    <p>Day 1 PM (3:00&ndash;5:00 PM). Can share panel with Booth judges or use a separate set. Gallery walk evaluation.</p>
+                </div>
+                <div class="judge-card">
+                    <h4>DCCian InnoPitch</h4>
+                    <div class="count">3&ndash;7</div>
+                    <p>Day 2 (10 AM&ndash;3 PM). Evaluate JHS &amp; SHS pitch presentations. Same panel for both brackets.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Breakdown Table -->
+        <table class="judge-breakdown-table">
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Day / Time</th>
+                    <th>Judges Needed</th>
+                    <th>Can Reuse From</th>
+                    <th>Suggested Profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Fix-It Fest</strong> (Gr 1&ndash;3)</td>
+                    <td>Day 1, 10:00 AM &ndash; 12:00 PM</td>
+                    <td><strong>3&ndash;5</strong></td>
+                    <td>&mdash;</td>
+                    <td>Administrators, teachers, parent reps</td>
+                </tr>
+                <tr>
+                    <td><strong>Fix-It Fest</strong> (Gr 4&ndash;6)</td>
+                    <td>Day 1, 1:00 PM &ndash; 3:00 PM</td>
+                    <td><strong>3&ndash;5</strong> (same panel)</td>
+                    <td>Fix-It Fest AM panel</td>
+                    <td>Same as morning panel</td>
+                </tr>
+                <tr>
+                    <td><strong>Golden Booth Brawl</strong></td>
+                    <td>Day 1, 3:00 PM &ndash; 5:00 PM</td>
+                    <td><strong>3&ndash;7</strong></td>
+                    <td>Fix-It Fest panel (done by 3 PM)</td>
+                    <td>Administrators, teachers, external partners</td>
+                </tr>
+                <tr>
+                    <td><strong>InfoGold</strong></td>
+                    <td>Day 1, 3:00 PM &ndash; 5:00 PM</td>
+                    <td><strong>3&ndash;5</strong></td>
+                    <td>Can share with Booth judges</td>
+                    <td>Same as Booth or separate educators</td>
+                </tr>
+                <tr>
+                    <td><strong>InnoPitch</strong> (JHS)</td>
+                    <td>Day 2, 10:00 AM &ndash; 12:00 PM</td>
+                    <td><strong>3&ndash;7</strong></td>
+                    <td>&mdash; (Day 2 fresh panel)</td>
+                    <td>Entrepreneurs, business professionals, alumni</td>
+                </tr>
+                <tr>
+                    <td><strong>InnoPitch</strong> (SHS)</td>
+                    <td>Day 2, 1:00 PM &ndash; 3:00 PM</td>
+                    <td><strong>3&ndash;7</strong> (same panel)</td>
+                    <td>InnoPitch AM panel</td>
+                    <td>Same as morning panel</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 32px; background: var(--gray-50); border-radius: 12px; padding: 24px; border: 1px solid var(--gray-200);">
+            <h4 style="margin-bottom: 12px; color: var(--dark);">Scheduling Optimization Notes</h4>
+            <ul style="margin-left: 20px; color: var(--gray-700); font-size: 0.9rem; line-height: 1.8;">
+                <li><strong>Fix-It Fest + Booth/InfoGold (Day 1):</strong> No time overlap. The Fix-It Fest panel finishes by 3:00 PM, and booth judging starts at 3:00 PM. The same judges can serve both if available.</li>
+                <li><strong>InfoGold + Booth Brawl (Day 1 PM):</strong> These run in parallel. If using separate criteria, the same judges can evaluate both during booth visits. Otherwise, split into 2 sub-panels.</li>
+                <li><strong>InnoPitch (Day 2):</strong> Completely independent of Day 1. Can recruit external professionals who are unavailable on Day 1.</li>
+                <li><strong>Minimum scenario (7 judges):</strong> 5 judges serve all Day 1 events (Fix-It Fest + Booth + InfoGold); 5 of them return or 7 fresh judges serve Day 2 InnoPitch.</li>
+                <li><strong>Recommended scenario (12&ndash;15 judges):</strong> 5 for Fix-It Fest, 5 for Booth+InfoGold (with 2&ndash;3 overlap from Fix-It panel), 5&ndash;7 for InnoPitch.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ========== GRASPS QUESTIONS ========== -->
+<section id="grasps" class="section grasps-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Fix-It Fest: GRASPS Questions</h2>
+            <div class="section-divider"></div>
+            <p>Complete problem bank for all 3 grade bands. Each problem follows the GRASPS framework for authentic, performance-based assessment.</p>
+        </div>
+
+        <div class="grasps-intro">
+            <img src="logos/fix-it-fest.png" alt="Fix-It Fest" style="width: 80px; border-radius: 14px; margin-bottom: 16px;">
+            <h3>The GRASPS Framework</h3>
+            <p>Every problem is structured using the same 6-element format to ensure consistency and fairness across all rounds.</p>
+            <div class="grasps-acronym">
+                <div class="grasps-letter"><span class="letter">G</span><span class="meaning">Goal</span></div>
+                <div class="grasps-letter"><span class="letter">R</span><span class="meaning">Role</span></div>
+                <div class="grasps-letter"><span class="letter">A</span><span class="meaning">Audience</span></div>
+                <div class="grasps-letter"><span class="letter">S</span><span class="meaning">Situation</span></div>
+                <div class="grasps-letter"><span class="letter">P</span><span class="meaning">Product / Performance</span></div>
+                <div class="grasps-letter"><span class="letter">S</span><span class="meaning">Standards</span></div>
+            </div>
+        </div>
+
+        <div class="grade-tab-container">
+            <button class="grade-tab active" onclick="switchGrade('g12')">Grades 1&ndash;2</button>
+            <button class="grade-tab" onclick="switchGrade('g34')">Grades 3&ndash;4</button>
+            <button class="grade-tab" onclick="switchGrade('g56')">Grades 5&ndash;6</button>
+        </div>
+
+        <!-- GRADES 1-2 -->
+        <div id="g12" class="grade-problems active">
+            <h3 style="margin-bottom: 24px; color: var(--dark);">Grades 1&ndash;2 Problem Bank (10 Problems)</h3>
+
+            <div class="problem-card">
+                <div class="problem-number">1</div>
+                <div class="problem-title">Clean Playground Patrol</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Keep the playground clean and safe.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Playground Helpers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Students and teachers on duty.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">No extra staff; must be easy and fun; works during recess.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A tool or simple service (with labeled drawing) that helps kids throw trash properly.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Safe, easy to use, reduces litter, clear explanation.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">2</div>
+                <div class="problem-title">Remember My Things</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Help pupils remember to bring school materials.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Class Routine Designers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Grade 1&ndash;2 pupils and parents.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">No phones required; works every school day; simple steps.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A reminder system (chart/tool/service) with 3-step routine.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Kid-friendly, realistic at home/school, clear routine.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">3</div>
+                <div class="problem-title">Orderly Lunch Line</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Make lunchtime more organized.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Lunch Line Leaders.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Pupils lining up and canteen staff.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Limited space; must avoid pushing; quick to follow.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A method/tool (signs, floor marks, tokens, etc.) shown in a sketch.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Improves order, safe, easy to follow.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">4</div>
+                <div class="problem-title">Quiet Classroom Reset</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Help the class become quiet fast after activities.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Classroom Calm Coaches.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Classmates and adviser.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Must work without shouting; no special equipment.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A signal routine/tool with 3 steps.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Effective, respectful, simple.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">5</div>
+                <div class="problem-title">Lost-and-Found Buddy</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Help return lost items to owners.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Lost-and-Found Helpers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Pupils and teachers.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Items get mixed up; must be easy to check; privacy-friendly.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A simple labeling or claiming system with a drawing.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Easy, fair, reduces lost items.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">6</div>
+                <div class="problem-title">Handwashing Hero</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Encourage proper handwashing.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Health Helpers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Pupils using the wash area.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Limited water/time; must be fun and fast.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A reminder tool/game/chant system illustrated.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Promotes correct steps, practical, fun.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">7</div>
+                <div class="problem-title">Kind Words Machine</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Reduce teasing and increase kind words.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Friendship Builders.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Classmates.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Must be simple; works daily; no one gets embarrassed.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A system/tool that helps kids give kind messages.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Inclusive, safe, easy, improves kindness.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">8</div>
+                <div class="problem-title">Pack-Up Fast</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Help pupils pack up quickly and correctly.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Pack-Up Trainers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Pupils and adviser.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Only 5 minutes; must work for different bags.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A checklist tool/system shown in a sketch.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Fast, clear, reduces forgotten items.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">9</div>
+                <div class="problem-title">Sharing Station</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Make sharing classroom materials fair.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Sharing Managers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Pupils during group work.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Limited supplies; must avoid fights.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A borrowing/return system with tokens or roles.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Fair, simple, reduces conflict.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">10</div>
+                <div class="problem-title">Safe Walk Signs</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Help kids walk safely in hallways.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Safety Sign Designers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Pupils moving between rooms.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Must be easy to understand quickly; works without teacher reminders.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">Signage/path idea drawn and labeled.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Clear, safe, realistic.</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GRADES 3-4 -->
+        <div id="g34" class="grade-problems">
+            <h3 style="margin-bottom: 24px; color: var(--dark);">Grades 3&ndash;4 Problem Bank (10 Problems)</h3>
+
+            <div class="problem-card">
+                <div class="problem-number">1</div>
+                <div class="problem-title">Food Waste Reducer</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Reduce food waste in the cafeteria.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">School Service Designers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Canteen staff and students.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">No extra budget; must work daily; avoid mess.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A system/service/tool with a labeled sketch and 3-step process.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Reduces waste, easy to run, realistic.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">2</div>
+                <div class="problem-title">New Student Welcome Kit</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Help new students feel welcome and learn routines.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Welcome Team.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">New students and their parents.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Must work in the first week; language should be simple.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A service/tool (buddy system + materials) shown in a diagram.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Friendly, clear, easy to implement.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">3</div>
+                <div class="problem-title">Reading More Books Challenge</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Encourage more reading.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Library Boost Crew.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Grade-level students and librarian.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Limited library time; must include rewards that aren't expensive.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A reading program with tracking method and incentives.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Motivating, fair, low-cost, measurable.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">4</div>
+                <div class="problem-title">Classroom Noise Meter (No Tech Required)</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Reduce unnecessary noise during work time.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Learning Environment Engineers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Teachers and students.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">No gadgets required; visible from anywhere in the room.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A visual tool/system (poster, scale, signals) with rules.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Clear, effective, easy to maintain.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">5</div>
+                <div class="problem-title">Queue System for School Office</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Make the school office line faster and fair.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Process Improvers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Students needing office help and office staff.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Small space; different reasons for visiting; must prevent cutting in line.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A ticket/priority/category system with a sketch.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Fair, quick, easy to understand.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">6</div>
+                <div class="problem-title">Clean Water Reminder</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Help students bring and drink water regularly.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Healthy Habits Designers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Students and class advisers.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Must not disrupt class; simple reminders only.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A classroom routine/system with visual cues.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Non-disruptive, practical, encourages habit.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">7</div>
+                <div class="problem-title">Group Work Role Cards</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Improve teamwork during group tasks.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Collaboration Coaches.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Student groups and teachers.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Groups of 4&ndash;6; roles must rotate fairly.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A role-card system (roles + rules) drawn and explained.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Fair rotation, clear roles, better participation.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">8</div>
+                <div class="problem-title">Recycle Sorting Helper</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Increase correct waste segregation.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Eco-Station Designers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Students and janitors.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Bins already exist; wrong items are often mixed.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">Labels, cues, or a simple training game with a sketch.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Improves sorting accuracy, low cost, easy.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">9</div>
+                <div class="problem-title">Homework Help Corner</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Help students who struggle with homework.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Peer Support Planners.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Students needing help and volunteer helpers.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Must be safe and supervised; limited time after class.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A peer-help service plan (schedule + rules + flow).</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Safe, inclusive, workable schedule.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">10</div>
+                <div class="problem-title">Class Materials Organizer</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Reduce time lost finding classroom materials.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Classroom Systems Designers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Teacher and class.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Limited storage; items must be easy to return.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A storage/labeling/check-out system in a diagram.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Faster access, simple upkeep, realistic.</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GRADES 5-6 -->
+        <div id="g56" class="grade-problems">
+            <h3 style="margin-bottom: 24px; color: var(--dark);">Grades 5&ndash;6 Problem Bank (10 Problems)</h3>
+
+            <div class="problem-card">
+                <div class="problem-number">1</div>
+                <div class="problem-title">Plastic-Free School Day</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Reduce plastic use in school for one month.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Student Innovators pitching to the School Improvement Council.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Students, canteen vendors, administrators.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Must be affordable; must not reduce hygiene; measurable results needed.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A product/service/policy idea + sketch + success metric.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">High impact, feasible, clear metric, good communication.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">2</div>
+                <div class="problem-title">Student&ndash;Teacher Communication Upgrade</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Improve communication about assignments and reminders.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Communication Designers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Teachers, students, parents.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Not everyone has reliable internet; must work offline too.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A multi-channel system (offline + optional online) with workflow.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Inclusive, reliable, easy adoption.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">3</div>
+                <div class="problem-title">Study More Engaging</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Make studying more engaging and effective.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Learning Experience Designers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Grade 5&ndash;6 students.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Must fit 20 minutes/day; no expensive materials.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A study system/tool/game + 3-step routine + metric.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Improves learning, practical, motivating.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">4</div>
+                <div class="problem-title">Energy-Saving Classroom Plan</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Reduce electricity use in classrooms.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">School Sustainability Team.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Teachers and students.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Cannot buy new appliances; must not reduce safety.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A behavior/system plan with checklist and monitoring method.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Safe, measurable, easy to implement.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">5</div>
+                <div class="problem-title">Anti-Bullying Reporting (Safe + Simple)</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Increase safe reporting of bullying incidents.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Student Safety Advocates.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Students, guidance counselor, administrators.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Must protect privacy; must prevent fake reports; clear follow-up steps.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A reporting + response process diagram + safeguards.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Safe, fair, workable, clear steps.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">6</div>
+                <div class="problem-title">Better Canteen Choices</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Encourage healthier food choices.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Health Campaign Designers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Students and canteen staff.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Must keep food affordable; no shaming; simple messaging.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A nudge system (labels, bundles, challenges) + success metric.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Positive, feasible, measurable.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">7</div>
+                <div class="problem-title">Campus Navigation for Visitors</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Help visitors find offices/rooms faster.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Service Design Team.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Parents/visitors and guards.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Minimal printing budget; must work even if staff are busy.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A signage/map system plan with placement sketch.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Clear, low-cost, effective.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">8</div>
+                <div class="problem-title">Faster Attendance Check</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Reduce time spent on attendance while keeping it accurate.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Classroom Process Engineers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Teachers and class officers.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">No phones required; must prevent cheating.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A manual system (cards, seating map, roles) + steps.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Accurate, quick, fair.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">9</div>
+                <div class="problem-title">Library Book Return Improvement</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Reduce late returns and missing books.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Library Operations Team.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Borrowers and librarian.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Must be easy; reminders cannot rely on apps only.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A reminder + accountability system with tracking method.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Reduces late returns, easy to run, measurable.</span></div>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-number">10</div>
+                <div class="problem-title">Disaster-Ready Classroom Kit</div>
+                <div class="grasps-detail">
+                    <div class="grasps-row"><span class="g-label">G &mdash; Goal:</span><span class="g-value">Improve classroom readiness for earthquakes/typhoons.</span></div>
+                    <div class="grasps-row"><span class="g-label">R &mdash; Role:</span><span class="g-value">Safety Preparedness Designers.</span></div>
+                    <div class="grasps-row"><span class="g-label">A &mdash; Audience:</span><span class="g-value">Classmates and teachers.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Situation:</span><span class="g-value">Low budget; items must be easy to store; roles must be clear.</span></div>
+                    <div class="grasps-row"><span class="g-label">P &mdash; Product:</span><span class="g-value">A kit + role plan + drill checklist shown in a diagram.</span></div>
+                    <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Safe, realistic, organized, clear roles.</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== RUBRICS ========== -->
+<section id="rubrics" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Scoring Rubrics</h2>
+            <div class="section-divider"></div>
+            <p>Standardized criteria for each event. All criteria scored 1&ndash;5 (Poor to Excellent).</p>
+        </div>
+
+        <div class="rubric-container">
+            <!-- Fix-It Fest Rubric -->
+            <div class="rubric-card">
+                <div class="rubric-card-header fixit">
+                    <img src="logos/fix-it-fest.png" alt="Fix-It Fest">
+                    <div><h4>Fix-It Fest</h4><small>Total: 25 points</small></div>
+                </div>
+                <table class="rubric-table">
+                    <tr><th>Criteria</th><th>Pts</th></tr>
+                    <tr><td>Goal + Situation Fit (G/S)</td><td>5</td></tr>
+                    <tr><td>Audience Fit + Clarity (A)</td><td>5</td></tr>
+                    <tr><td>Creativity &amp; Innovation</td><td>5</td></tr>
+                    <tr><td>Feasibility (Situation/Resources)</td><td>5</td></tr>
+                    <tr><td>Presentation &amp; Teamwork (Performance)</td><td>5</td></tr>
+                </table>
+            </div>
+
+            <!-- InnoPitch Rubric -->
+            <div class="rubric-card">
+                <div class="rubric-card-header pitch">
+                    <img src="logos/innopitch.png" alt="InnoPitch">
+                    <div><h4>DCCian InnoPitch</h4><small>Total: 20 points</small></div>
+                </div>
+                <table class="rubric-table">
+                    <tr><th>Criteria</th><th>Pts</th></tr>
+                    <tr><td>Problem &amp; User Clarity</td><td>5</td></tr>
+                    <tr><td>Solution &amp; Innovation</td><td>5</td></tr>
+                    <tr><td>Feasibility &amp; Execution Plan</td><td>5</td></tr>
+                    <tr><td>Pitch Delivery &amp; Teamwork</td><td>5</td></tr>
+                </table>
+            </div>
+
+            <!-- Booth - Innovation Product -->
+            <div class="rubric-card">
+                <div class="rubric-card-header booth">
+                    <img src="logos/golden-booth.png" alt="Golden Booth">
+                    <div><h4>Best Innovative Product</h4><small>Total: 25 points</small></div>
+                </div>
+                <table class="rubric-table">
+                    <tr><th>Criteria</th><th>Pts</th></tr>
+                    <tr><td>Originality and Creativity</td><td>5</td></tr>
+                    <tr><td>Problem-Solution Fit</td><td>5</td></tr>
+                    <tr><td>Usefulness and Potential Impact</td><td>5</td></tr>
+                    <tr><td>Feasibility for School Context</td><td>5</td></tr>
+                    <tr><td>Clarity of Explanation</td><td>5</td></tr>
+                </table>
+            </div>
+
+            <!-- Booth - Most Innovative Design -->
+            <div class="rubric-card">
+                <div class="rubric-card-header booth">
+                    <img src="logos/golden-booth.png" alt="Golden Booth">
+                    <div><h4>Most Innovative Booth Design</h4><small>Total: 25 points</small></div>
+                </div>
+                <table class="rubric-table">
+                    <tr><th>Criteria</th><th>Pts</th></tr>
+                    <tr><td>Creativity &amp; Originality of Design</td><td>5</td></tr>
+                    <tr><td>Resourcefulness &amp; Sustainability</td><td>5</td></tr>
+                    <tr><td>Customer Engagement &amp; Interactivity</td><td>5</td></tr>
+                    <tr><td>Clarity of Messaging &amp; Branding</td><td>5</td></tr>
+                    <tr><td>Teamwork &amp; Booth Management</td><td>5</td></tr>
+                </table>
+            </div>
+
+            <!-- InfoGold Rubric -->
+            <div class="rubric-card">
+                <div class="rubric-card-header infogold">
+                    <img src="logos/infogold.png" alt="InfoGold">
+                    <div><h4>InfoGold</h4><small>Total: 20 points</small></div>
+                </div>
+                <table class="rubric-table">
+                    <tr><th>Criteria</th><th>Pts</th></tr>
+                    <tr><td>Clarity</td><td>5</td></tr>
+                    <tr><td>Visual Communication</td><td>5</td></tr>
+                    <tr><td>Logic &amp; Feasibility</td><td>5</td></tr>
+                    <tr><td>Impact / Value</td><td>5</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== AWARDS ========== -->
+<section id="awards" class="section" style="background: var(--white);">
+    <div class="container">
+        <div class="section-header">
+            <h2>Awards &amp; Recognition</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+            <!-- Fix-It Fest Awards -->
+            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--fixit-color);">
+                <h4 style="color: var(--fixit-color); margin-bottom: 16px;">Fix-It Fest</h4>
+                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
+                    <li>Winner per grade level (Grades 1&ndash;6)</li>
+                    <li>Most Creative Solution</li>
+                    <li>Best Teamwork</li>
+                    <li>Certificates for all participants</li>
+                </ul>
+            </div>
+
+            <!-- Booth Awards -->
+            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--booth-color);">
+                <h4 style="color: var(--booth-color); margin-bottom: 16px;">Golden Booth Brawl</h4>
+                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
+                    <li>Highest Profit (per zone)</li>
+                    <li>Best Innovative Product/Service</li>
+                    <li>Most Innovative Booth Design</li>
+                    <li>Best Ad &amp; Sales Talk</li>
+                </ul>
+            </div>
+
+            <!-- InnoPitch Awards -->
+            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--pitch-color);">
+                <h4 style="color: var(--pitch-color); margin-bottom: 16px;">DCCian InnoPitch</h4>
+                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
+                    <li>Champion, 1st &amp; 2nd Runner-Up (per bracket)</li>
+                    <li>Best Innovation</li>
+                    <li>Best Social Impact</li>
+                    <li>Best Pitch Delivery</li>
+                    <li>People's Choice (optional)</li>
+                </ul>
+            </div>
+
+            <!-- InfoGold Awards -->
+            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--infogold-color);">
+                <h4 style="color: var(--infogold-color); margin-bottom: 16px;">InfoGold</h4>
+                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
+                    <li>Best Visual Design</li>
+                    <li>Best Clarity</li>
+                    <li>Most Feasible Idea</li>
+                    <li>People's Choice</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <img src="logos/sparksfest-main.png" alt="DCC SparksFest 2026">
+    <p class="footer-title">DCC SparksFest 2026</p>
+    <p>Innovation Culmination Programs</p>
+    <p>DCC BED Campus, Rasay &amp; Sto. Cristo Streets, Toril, Davao City, Philippines</p>
+    <p style="margin-top: 16px; font-size: 0.75rem; opacity: 0.5;">April 14&ndash;15, 2026</p>
+</footer>
+
+<script>
+    // Day tab switching
+    function switchDay(day) {
+        document.querySelectorAll('.day-program').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.day-tab').forEach(el => el.classList.remove('active'));
+        document.getElementById('day' + day).classList.add('active');
+        document.querySelectorAll('.day-tab')[day - 1].classList.add('active');
+    }
+
+    // Grade tab switching
+    function switchGrade(grade) {
+        document.querySelectorAll('.grade-problems').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.grade-tab').forEach(el => el.classList.remove('active'));
+        document.getElementById(grade).classList.add('active');
+        const tabs = document.querySelectorAll('.grade-tab');
+        const map = { 'g12': 0, 'g34': 1, 'g56': 2 };
+        tabs[map[grade]].classList.add('active');
+    }
+
+    // Smooth scrolling for nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
