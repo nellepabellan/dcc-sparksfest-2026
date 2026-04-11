@@ -112,9 +112,35 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
+            align-items: center;
             gap: 4px;
             overflow-x: auto;
             scrollbar-width: none;
+        }
+        .nav-logo {
+            width: 0;
+            height: 40px;
+            opacity: 0;
+            margin-right: 0;
+            flex-shrink: 0;
+            transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                        margin 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            margin-left: auto;
+            order: 99;
+        }
+        .nav-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .nav-logo.visible {
+            width: 40px;
+            opacity: 1;
+            margin-left: auto;
+            margin-right: 0;
         }
         .nav-inner::-webkit-scrollbar { display: none; }
         .nav-link {
@@ -726,6 +752,9 @@
         <a href="#judges" class="nav-link">Judges</a>
         <a href="#rubrics" class="nav-link">Rubrics</a>
         <a href="#awards" class="nav-link">Awards</a>
+        <div class="nav-logo" id="navLogo">
+            <img src="logos/sparksfest-main.png" alt="DCC SparksFest 2026">
+        </div>
     </div>
 </nav>
 
@@ -1981,6 +2010,25 @@
 </div>
 
 <script>
+    // Nav logo scroll animation
+    (function() {
+        const heroLogo = document.querySelector('.hero-logo');
+        const navLogo = document.getElementById('navLogo');
+        if (!heroLogo || !navLogo) return;
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    navLogo.classList.remove('visible');
+                } else {
+                    navLogo.classList.add('visible');
+                }
+            });
+        }, { threshold: 0, rootMargin: '-60px 0px 0px 0px' });
+
+        observer.observe(heroLogo);
+    })();
+
     // Modal functions
     function openModal(id) {
         document.getElementById('modal-' + id).classList.add('active');
