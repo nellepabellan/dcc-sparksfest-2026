@@ -725,7 +725,6 @@
         <a href="#overview" class="nav-link">Overview</a>
         <a href="#program" class="nav-link">Program Flow</a>
         <a href="#judges" class="nav-link">Judges</a>
-        <a href="#grasps" class="nav-link">GRASPS Questions</a>
         <a href="#rubrics" class="nav-link">Rubrics</a>
         <a href="#awards" class="nav-link">Awards</a>
     </div>
@@ -1139,30 +1138,306 @@
     </div>
 </section>
 
-<!-- ========== GRASPS QUESTIONS ========== -->
-<section id="grasps" class="section grasps-section">
+<!-- ========== RUBRICS ========== -->
+<section id="rubrics" class="section">
     <div class="container">
         <div class="section-header">
-            <h2>Fix-It Fest: GRASPS Questions</h2>
+            <h2>Scoring Rubrics</h2>
             <div class="section-divider"></div>
-            <p>Complete problem bank for all 3 grade bands. Each problem follows the GRASPS framework for authentic, performance-based assessment.</p>
+            <p>Standardized criteria for each event. All criteria scored 1&ndash;5 (Poor to Excellent).</p>
         </div>
 
-        <div class="grasps-intro">
-            <img src="logos/fix-it-fest.png" alt="Fix-It Fest" style="width: 80px; border-radius: 14px; margin-bottom: 16px; background: var(--white); padding: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
-            <h3>The GRASPS Framework</h3>
-            <p>Every problem is structured using the same 6-element format to ensure consistency and fairness across all rounds.</p>
-            <div class="grasps-acronym">
-                <div class="grasps-letter"><span class="letter">G</span><span class="meaning">Goal</span></div>
-                <div class="grasps-letter"><span class="letter">R</span><span class="meaning">Role</span></div>
-                <div class="grasps-letter"><span class="letter">A</span><span class="meaning">Audience</span></div>
-                <div class="grasps-letter"><span class="letter">S</span><span class="meaning">Situation</span></div>
-                <div class="grasps-letter"><span class="letter">P</span><span class="meaning">Product / Performance</span></div>
-                <div class="grasps-letter"><span class="letter">S</span><span class="meaning">Standards</span></div>
+        <div class="rubric-container">
+            <!-- Fix-It Fest Rubric -->
+            <div class="rubric-card">
+                <div class="rubric-card-header fixit">
+                    <img src="logos/fix-it-fest.png" alt="Fix-It Fest">
+                    <div><h4>Fix-It Fest</h4><small>Total: 25 points</small></div>
+                </div>
+                <table class="rubric-table">
+                    <tr><th>Criteria</th><th>Pts</th></tr>
+                    <tr><td>Goal + Situation Fit (G/S)</td><td>5</td></tr>
+                    <tr><td>Audience Fit + Clarity (A)</td><td>5</td></tr>
+                    <tr><td>Creativity &amp; Innovation</td><td>5</td></tr>
+                    <tr><td>Feasibility (Situation/Resources)</td><td>5</td></tr>
+                    <tr><td>Presentation &amp; Teamwork (Performance)</td><td>5</td></tr>
+                </table>
+            </div>
+
+            <!-- InnoPitch Rubric -->
+            <div class="rubric-card">
+                <div class="rubric-card-header pitch">
+                    <img src="logos/innopitch.png" alt="InnoPitch">
+                    <div><h4>DCCian InnoPitch</h4><small>Total: 20 points</small></div>
+                </div>
+                <table class="rubric-table">
+                    <tr><th>Criteria</th><th>Pts</th></tr>
+                    <tr><td>Problem &amp; User Clarity</td><td>5</td></tr>
+                    <tr><td>Solution &amp; Innovation</td><td>5</td></tr>
+                    <tr><td>Feasibility &amp; Execution Plan</td><td>5</td></tr>
+                    <tr><td>Pitch Delivery &amp; Teamwork</td><td>5</td></tr>
+                </table>
+            </div>
+
+            <!-- Booth - Innovation Product -->
+            <div class="rubric-card">
+                <div class="rubric-card-header booth">
+                    <img src="logos/golden-booth.png" alt="Golden Booth">
+                    <div><h4>Best Innovative Product</h4><small>Total: 25 points</small></div>
+                </div>
+                <table class="rubric-table">
+                    <tr><th>Criteria</th><th>Pts</th></tr>
+                    <tr><td>Originality and Creativity</td><td>5</td></tr>
+                    <tr><td>Problem-Solution Fit</td><td>5</td></tr>
+                    <tr><td>Usefulness and Potential Impact</td><td>5</td></tr>
+                    <tr><td>Feasibility for School Context</td><td>5</td></tr>
+                    <tr><td>Clarity of Explanation</td><td>5</td></tr>
+                </table>
+            </div>
+
+            <!-- Booth - Most Innovative Design -->
+            <div class="rubric-card">
+                <div class="rubric-card-header booth">
+                    <img src="logos/golden-booth.png" alt="Golden Booth">
+                    <div><h4>Most Innovative Booth Design</h4><small>Total: 25 points</small></div>
+                </div>
+                <table class="rubric-table">
+                    <tr><th>Criteria</th><th>Pts</th></tr>
+                    <tr><td>Creativity &amp; Originality of Design</td><td>5</td></tr>
+                    <tr><td>Resourcefulness &amp; Sustainability</td><td>5</td></tr>
+                    <tr><td>Customer Engagement &amp; Interactivity</td><td>5</td></tr>
+                    <tr><td>Clarity of Messaging &amp; Branding</td><td>5</td></tr>
+                    <tr><td>Teamwork &amp; Booth Management</td><td>5</td></tr>
+                </table>
+            </div>
+
+            <!-- InfoGold Rubric -->
+            <div class="rubric-card">
+                <div class="rubric-card-header infogold">
+                    <img src="logos/infogold.png" alt="InfoGold">
+                    <div><h4>InfoGold</h4><small>Total: 20 points</small></div>
+                </div>
+                <table class="rubric-table">
+                    <tr><th>Criteria</th><th>Pts</th></tr>
+                    <tr><td>Clarity</td><td>5</td></tr>
+                    <tr><td>Visual Communication</td><td>5</td></tr>
+                    <tr><td>Logic &amp; Feasibility</td><td>5</td></tr>
+                    <tr><td>Impact / Value</td><td>5</td></tr>
+                </table>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="grade-tab-container">
+<!-- ========== AWARDS ========== -->
+<section id="awards" class="section" style="background: var(--white);">
+    <div class="container">
+        <div class="section-header">
+            <h2>Awards &amp; Recognition</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+            <!-- Fix-It Fest Awards -->
+            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--fixit-color);">
+                <h4 style="color: var(--fixit-color); margin-bottom: 16px;">Fix-It Fest</h4>
+                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
+                    <li>Winner per grade level (Grades 1&ndash;6)</li>
+                    <li>Most Creative Solution</li>
+                    <li>Best Teamwork</li>
+                    <li>Certificates for all participants</li>
+                </ul>
+            </div>
+
+            <!-- Booth Awards -->
+            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--booth-color);">
+                <h4 style="color: var(--booth-color); margin-bottom: 16px;">Golden Booth Brawl</h4>
+                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
+                    <li>Highest Profit (per zone)</li>
+                    <li>Best Innovative Product/Service</li>
+                    <li>Most Innovative Booth Design</li>
+                    <li>Best Ad &amp; Sales Talk</li>
+                </ul>
+            </div>
+
+            <!-- InnoPitch Awards -->
+            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--pitch-color);">
+                <h4 style="color: var(--pitch-color); margin-bottom: 16px;">DCCian InnoPitch</h4>
+                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
+                    <li>Champion, 1st &amp; 2nd Runner-Up (per bracket)</li>
+                    <li>Best Innovation</li>
+                    <li>Best Social Impact</li>
+                    <li>Best Pitch Delivery</li>
+                    <li>People's Choice (optional)</li>
+                </ul>
+            </div>
+
+            <!-- InfoGold Awards -->
+            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--infogold-color);">
+                <h4 style="color: var(--infogold-color); margin-bottom: 16px;">InfoGold</h4>
+                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
+                    <li>Best Visual Design</li>
+                    <li>Best Clarity</li>
+                    <li>Most Feasible Idea</li>
+                    <li>People's Choice</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <img src="logos/sparksfest-main.png" alt="DCC SparksFest 2026">
+    <p class="footer-title">DCC SparksFest 2026</p>
+    <p>Innovation Culmination Programs</p>
+    <p>DCC BED Campus, Rasay &amp; Sto. Cristo Streets, Toril, Davao City, Philippines</p>
+    <p style="margin-top: 16px; font-size: 0.75rem; opacity: 0.5;">April 14&ndash;15, 2026</p>
+</footer>
+
+<!-- ========== MODALS ========== -->
+
+<!-- Golden Booth Brawl Modal -->
+<div class="modal-overlay" id="modal-booth" onclick="closeModalOverlay(event)">
+    <div class="modal-dialog">
+        <div class="modal-header booth-bg">
+            <img src="logos/golden-booth.png" alt="Golden Booth Brawl">
+            <div>
+                <h3>Golden Booth Brawl</h3>
+                <div class="modal-tagline">Build It. Brand It.</div>
+            </div>
+            <button class="modal-close" onclick="closeModal('booth')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <h4>Booth Rules &amp; Guidelines</h4>
+            <ul>
+                <li>Each booth may sell <strong>products and/or services</strong> (can be multiple)</li>
+                <li>All offerings must be <strong>safe, school-appropriate, and hygienic</strong></li>
+                <li>Booth must display: booth name &amp; theme, price list, and a simple expense/sales tracking sheet</li>
+                <li><strong>No budget cap</strong> &mdash; teams are encouraged to keep costs reasonable</li>
+                <li><strong>Profit = Total Earnings &minus; Expenses</strong></li>
+            </ul>
+
+            <h4>Setup &amp; Environment</h4>
+            <ul>
+                <li><strong>Venue:</strong> Covered court, multipurpose hall, or open campus space</li>
+                <li><strong>Booth Area:</strong> Zoned by level (Elementary / JHS / SHS), then assigned per section within each zone</li>
+                <li>Sections may prepare and pre-assemble booth materials the day before the event</li>
+            </ul>
+
+            <h4>Event Flow</h4>
+            <div class="step-block">
+                <strong>Step 1: Opening &amp; Ad/Sales Talk Challenge</strong><br>
+                Each booth delivers a <strong>2-minute</strong> advertisement/pitch on stage (per program). Sales officially begin immediately after.
+            </div>
+            <div class="step-block">
+                <strong>Step 2: Selling Period</strong><br>
+                Booths operate and sell to visitors. Judges conduct visits and scoring during this period.
+            </div>
+            <div class="step-block">
+                <strong>Step 3: Closing &amp; Accounting (15&ndash;20 min)</strong><br>
+                Teams count cash, finalize sales totals, compute profit, and submit finance summary. The booth contest runs for <strong>2 days</strong>. Final total sales counting (Day 1 + Day 2) must be submitted <strong>not later than 2:00 PM on Day 2</strong>.
+            </div>
+            <div class="step-block">
+                <strong>Step 4: Awards &amp; Recognition (10&ndash;15 min)</strong><br>
+                Announce winners per category and recognize participation.
+            </div>
+
+            <h4>Required Finance Documents</h4>
+            <ul>
+                <li>Itemized expense list (with receipts if required)</li>
+                <li>Price list</li>
+                <li>Total sales computation</li>
+            </ul>
+
+            <div class="note-box">
+                <strong>Note:</strong> Booths are organized into <strong>3 zones only</strong>: Elementary, Junior High, and Senior High. Setup and flow arranged per program level to fit the venue layout.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fix-It Fest Modal -->
+<div class="modal-overlay" id="modal-fixit" onclick="closeModalOverlay(event)">
+    <div class="modal-dialog">
+        <div class="modal-header fixit-bg">
+            <img src="logos/fix-it-fest.png" alt="Fix-It Fest">
+            <div>
+                <h3>Fix-It Fest</h3>
+                <div class="modal-tagline">Small hands. Golden solutions.</div>
+            </div>
+            <button class="modal-close" onclick="closeModal('fixit')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <h4>Team Formation</h4>
+            <ul>
+                <li>Each team consists of <strong>5 members</strong></li>
+                <li>Grades 1&ndash;3: 4 students + 1 parent</li>
+                <li>Grades 4&ndash;6: 5 students</li>
+                <li>One team represents each section</li>
+                <li>Team selection should be completed at least <strong>2 weeks</strong> before the contest</li>
+            </ul>
+
+            <h4>Setup &amp; Environment</h4>
+            <ul>
+                <li><strong>Seating:</strong> Teams sit together at designated tables, quiz bee style</li>
+                <li><strong>Materials provided:</strong> Drawing paper or whiteboard, markers/colored pencils, writing materials</li>
+                <li><strong>Timer</strong> visible to all participants</li>
+                <li><strong>GRASPS Prompt Card/Slide</strong> displayed for every problem</li>
+            </ul>
+
+            <h4>Round Structure (3 Rounds)</h4>
+            <div class="step-block">
+                <strong>Step 1: GRASPS Prompt Presentation (1 minute)</strong><br>
+                Game Master presents a GRASPS-formatted problem covering Goal, Role, Audience, Situation, Product/Performance, and Standards. Prompt is displayed visually and read aloud. Teams may ask clarifying questions (30 seconds).
+            </div>
+            <div class="step-block">
+                <strong>Step 2: Solution Development (3 minutes)</strong><br>
+                Teams brainstorm and design within constraints. Must produce a <strong>labeled sketch</strong> (required) and a short <strong>pitch outline</strong> (recommended): Problem &rarr; Solution &rarr; How it works. When the timer ends, all work must stop immediately.
+            </div>
+            <div class="step-block">
+                <strong>Step 3: Presentation Order Randomization (1 minute)</strong><br>
+                Random selection determines presentation order (drawing numbers or digital randomizer).
+            </div>
+            <div class="step-block">
+                <strong>Step 4: Team Presentations (2 minutes per team)</strong><br>
+                Presenters follow the GRASPS Pitch Format in this fixed order:
+                <ol style="margin: 8px 0 0 20px;">
+                    <li><strong>Role:</strong> "We are the ___."</li>
+                    <li><strong>Goal:</strong> "Our goal is to ___."</li>
+                    <li><strong>Audience:</strong> "This helps ___ because ___."</li>
+                    <li><strong>Situation/Constraints:</strong> "We must ___ (constraints)."</li>
+                    <li><strong>Product/Performance:</strong> "Our solution is ___." + show sketch</li>
+                    <li><strong>How it works:</strong> Step &rarr; Step &rarr; Step</li>
+                    <li><strong>Success link:</strong> "We will succeed because ___ (tie to standards)."</li>
+                </ol>
+            </div>
+            <div class="step-block">
+                <strong>Step 5: Judging &amp; Scoring</strong><br>
+                Judges score using the GRASPS-aligned rubric. Scores recorded but not announced until the end.
+            </div>
+
+            <h4>Winner Determination</h4>
+            <ul>
+                <li>One winning team per grade level (Grades 1&ndash;6)</li>
+                <li>Highest cumulative score across all 3 rounds</li>
+                <li>Tiebreaker: judges deliberate or use bonus challenge</li>
+            </ul>
+
+            
+            <h4 style="margin-top: 32px; border-bottom: 3px solid var(--fixit-color);">GRASPS Problem Bank</h4>
+            <p style="margin-bottom: 16px;">30 problems across 3 grade bands. Each follows the GRASPS framework: Goal, Role, Audience, Situation, Product/Performance, Standards.</p>
+
+            <div class="grasps-acronym" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin-bottom: 20px;">
+                <div style="background: var(--fixit-color); color: white; border-radius: 8px; padding: 8px 4px; text-align: center;"><strong style="font-size: 1.1rem;">G</strong><br><span style="font-size: 0.65rem;">Goal</span></div>
+                <div style="background: var(--fixit-color); color: white; border-radius: 8px; padding: 8px 4px; text-align: center;"><strong style="font-size: 1.1rem;">R</strong><br><span style="font-size: 0.65rem;">Role</span></div>
+                <div style="background: var(--fixit-color); color: white; border-radius: 8px; padding: 8px 4px; text-align: center;"><strong style="font-size: 1.1rem;">A</strong><br><span style="font-size: 0.65rem;">Audience</span></div>
+                <div style="background: var(--fixit-color); color: white; border-radius: 8px; padding: 8px 4px; text-align: center;"><strong style="font-size: 1.1rem;">S</strong><br><span style="font-size: 0.65rem;">Situation</span></div>
+                <div style="background: var(--fixit-color); color: white; border-radius: 8px; padding: 8px 4px; text-align: center;"><strong style="font-size: 1.1rem;">P</strong><br><span style="font-size: 0.65rem;">Product</span></div>
+                <div style="background: var(--fixit-color); color: white; border-radius: 8px; padding: 8px 4px; text-align: center;"><strong style="font-size: 1.1rem;">S</strong><br><span style="font-size: 0.65rem;">Standards</span></div>
+            </div>
+
+<div class="grade-tab-container">
             <button class="grade-tab active" onclick="switchGrade('g12')">Grades 1&ndash;2</button>
             <button class="grade-tab" onclick="switchGrade('g34')">Grades 3&ndash;4</button>
             <button class="grade-tab" onclick="switchGrade('g56')">Grades 5&ndash;6</button>
@@ -1571,297 +1846,8 @@
                     <div class="grasps-row"><span class="g-label">S &mdash; Standards:</span><span class="g-value">Safe, realistic, organized, clear roles.</span></div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- ========== RUBRICS ========== -->
-<section id="rubrics" class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Scoring Rubrics</h2>
-            <div class="section-divider"></div>
-            <p>Standardized criteria for each event. All criteria scored 1&ndash;5 (Poor to Excellent).</p>
-        </div>
-
-        <div class="rubric-container">
-            <!-- Fix-It Fest Rubric -->
-            <div class="rubric-card">
-                <div class="rubric-card-header fixit">
-                    <img src="logos/fix-it-fest.png" alt="Fix-It Fest">
-                    <div><h4>Fix-It Fest</h4><small>Total: 25 points</small></div>
-                </div>
-                <table class="rubric-table">
-                    <tr><th>Criteria</th><th>Pts</th></tr>
-                    <tr><td>Goal + Situation Fit (G/S)</td><td>5</td></tr>
-                    <tr><td>Audience Fit + Clarity (A)</td><td>5</td></tr>
-                    <tr><td>Creativity &amp; Innovation</td><td>5</td></tr>
-                    <tr><td>Feasibility (Situation/Resources)</td><td>5</td></tr>
-                    <tr><td>Presentation &amp; Teamwork (Performance)</td><td>5</td></tr>
-                </table>
-            </div>
-
-            <!-- InnoPitch Rubric -->
-            <div class="rubric-card">
-                <div class="rubric-card-header pitch">
-                    <img src="logos/innopitch.png" alt="InnoPitch">
-                    <div><h4>DCCian InnoPitch</h4><small>Total: 20 points</small></div>
-                </div>
-                <table class="rubric-table">
-                    <tr><th>Criteria</th><th>Pts</th></tr>
-                    <tr><td>Problem &amp; User Clarity</td><td>5</td></tr>
-                    <tr><td>Solution &amp; Innovation</td><td>5</td></tr>
-                    <tr><td>Feasibility &amp; Execution Plan</td><td>5</td></tr>
-                    <tr><td>Pitch Delivery &amp; Teamwork</td><td>5</td></tr>
-                </table>
-            </div>
-
-            <!-- Booth - Innovation Product -->
-            <div class="rubric-card">
-                <div class="rubric-card-header booth">
-                    <img src="logos/golden-booth.png" alt="Golden Booth">
-                    <div><h4>Best Innovative Product</h4><small>Total: 25 points</small></div>
-                </div>
-                <table class="rubric-table">
-                    <tr><th>Criteria</th><th>Pts</th></tr>
-                    <tr><td>Originality and Creativity</td><td>5</td></tr>
-                    <tr><td>Problem-Solution Fit</td><td>5</td></tr>
-                    <tr><td>Usefulness and Potential Impact</td><td>5</td></tr>
-                    <tr><td>Feasibility for School Context</td><td>5</td></tr>
-                    <tr><td>Clarity of Explanation</td><td>5</td></tr>
-                </table>
-            </div>
-
-            <!-- Booth - Most Innovative Design -->
-            <div class="rubric-card">
-                <div class="rubric-card-header booth">
-                    <img src="logos/golden-booth.png" alt="Golden Booth">
-                    <div><h4>Most Innovative Booth Design</h4><small>Total: 25 points</small></div>
-                </div>
-                <table class="rubric-table">
-                    <tr><th>Criteria</th><th>Pts</th></tr>
-                    <tr><td>Creativity &amp; Originality of Design</td><td>5</td></tr>
-                    <tr><td>Resourcefulness &amp; Sustainability</td><td>5</td></tr>
-                    <tr><td>Customer Engagement &amp; Interactivity</td><td>5</td></tr>
-                    <tr><td>Clarity of Messaging &amp; Branding</td><td>5</td></tr>
-                    <tr><td>Teamwork &amp; Booth Management</td><td>5</td></tr>
-                </table>
-            </div>
-
-            <!-- InfoGold Rubric -->
-            <div class="rubric-card">
-                <div class="rubric-card-header infogold">
-                    <img src="logos/infogold.png" alt="InfoGold">
-                    <div><h4>InfoGold</h4><small>Total: 20 points</small></div>
-                </div>
-                <table class="rubric-table">
-                    <tr><th>Criteria</th><th>Pts</th></tr>
-                    <tr><td>Clarity</td><td>5</td></tr>
-                    <tr><td>Visual Communication</td><td>5</td></tr>
-                    <tr><td>Logic &amp; Feasibility</td><td>5</td></tr>
-                    <tr><td>Impact / Value</td><td>5</td></tr>
-                </table>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== AWARDS ========== -->
-<section id="awards" class="section" style="background: var(--white);">
-    <div class="container">
-        <div class="section-header">
-            <h2>Awards &amp; Recognition</h2>
-            <div class="section-divider"></div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-            <!-- Fix-It Fest Awards -->
-            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--fixit-color);">
-                <h4 style="color: var(--fixit-color); margin-bottom: 16px;">Fix-It Fest</h4>
-                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
-                    <li>Winner per grade level (Grades 1&ndash;6)</li>
-                    <li>Most Creative Solution</li>
-                    <li>Best Teamwork</li>
-                    <li>Certificates for all participants</li>
-                </ul>
-            </div>
-
-            <!-- Booth Awards -->
-            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--booth-color);">
-                <h4 style="color: var(--booth-color); margin-bottom: 16px;">Golden Booth Brawl</h4>
-                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
-                    <li>Highest Profit (per zone)</li>
-                    <li>Best Innovative Product/Service</li>
-                    <li>Most Innovative Booth Design</li>
-                    <li>Best Ad &amp; Sales Talk</li>
-                </ul>
-            </div>
-
-            <!-- InnoPitch Awards -->
-            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--pitch-color);">
-                <h4 style="color: var(--pitch-color); margin-bottom: 16px;">DCCian InnoPitch</h4>
-                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
-                    <li>Champion, 1st &amp; 2nd Runner-Up (per bracket)</li>
-                    <li>Best Innovation</li>
-                    <li>Best Social Impact</li>
-                    <li>Best Pitch Delivery</li>
-                    <li>People's Choice (optional)</li>
-                </ul>
-            </div>
-
-            <!-- InfoGold Awards -->
-            <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--infogold-color);">
-                <h4 style="color: var(--infogold-color); margin-bottom: 16px;">InfoGold</h4>
-                <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
-                    <li>Best Visual Design</li>
-                    <li>Best Clarity</li>
-                    <li>Most Feasible Idea</li>
-                    <li>People's Choice</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== FOOTER ========== -->
-<footer class="footer">
-    <img src="logos/sparksfest-main.png" alt="DCC SparksFest 2026">
-    <p class="footer-title">DCC SparksFest 2026</p>
-    <p>Innovation Culmination Programs</p>
-    <p>DCC BED Campus, Rasay &amp; Sto. Cristo Streets, Toril, Davao City, Philippines</p>
-    <p style="margin-top: 16px; font-size: 0.75rem; opacity: 0.5;">April 14&ndash;15, 2026</p>
-</footer>
-
-<!-- ========== MODALS ========== -->
-
-<!-- Golden Booth Brawl Modal -->
-<div class="modal-overlay" id="modal-booth" onclick="closeModalOverlay(event)">
-    <div class="modal-dialog">
-        <div class="modal-header booth-bg">
-            <img src="logos/golden-booth.png" alt="Golden Booth Brawl">
-            <div>
-                <h3>Golden Booth Brawl</h3>
-                <div class="modal-tagline">Build It. Brand It.</div>
-            </div>
-            <button class="modal-close" onclick="closeModal('booth')">&times;</button>
-        </div>
-        <div class="modal-body">
-            <h4>Booth Rules &amp; Guidelines</h4>
-            <ul>
-                <li>Each booth may sell <strong>products and/or services</strong> (can be multiple)</li>
-                <li>All offerings must be <strong>safe, school-appropriate, and hygienic</strong></li>
-                <li>Booth must display: booth name &amp; theme, price list, and a simple expense/sales tracking sheet</li>
-                <li><strong>No budget cap</strong> &mdash; teams are encouraged to keep costs reasonable</li>
-                <li><strong>Profit = Total Earnings &minus; Expenses</strong></li>
-            </ul>
-
-            <h4>Setup &amp; Environment</h4>
-            <ul>
-                <li><strong>Venue:</strong> Covered court, multipurpose hall, or open campus space</li>
-                <li><strong>Booth Area:</strong> Zoned by level (Elementary / JHS / SHS), then assigned per section within each zone</li>
-                <li>Sections may prepare and pre-assemble booth materials the day before the event</li>
-            </ul>
-
-            <h4>Event Flow</h4>
-            <div class="step-block">
-                <strong>Step 1: Opening &amp; Ad/Sales Talk Challenge</strong><br>
-                Each booth delivers a <strong>2-minute</strong> advertisement/pitch on stage (per program). Sales officially begin immediately after.
-            </div>
-            <div class="step-block">
-                <strong>Step 2: Selling Period</strong><br>
-                Booths operate and sell to visitors. Judges conduct visits and scoring during this period.
-            </div>
-            <div class="step-block">
-                <strong>Step 3: Closing &amp; Accounting (15&ndash;20 min)</strong><br>
-                Teams count cash, finalize sales totals, compute profit, and submit finance summary. The booth contest runs for <strong>2 days</strong>. Final total sales counting (Day 1 + Day 2) must be submitted <strong>not later than 2:00 PM on Day 2</strong>.
-            </div>
-            <div class="step-block">
-                <strong>Step 4: Awards &amp; Recognition (10&ndash;15 min)</strong><br>
-                Announce winners per category and recognize participation.
-            </div>
-
-            <h4>Required Finance Documents</h4>
-            <ul>
-                <li>Itemized expense list (with receipts if required)</li>
-                <li>Price list</li>
-                <li>Total sales computation</li>
-            </ul>
-
-            <div class="note-box">
-                <strong>Note:</strong> Booths are organized into <strong>3 zones only</strong>: Elementary, Junior High, and Senior High. Setup and flow arranged per program level to fit the venue layout.
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Fix-It Fest Modal -->
-<div class="modal-overlay" id="modal-fixit" onclick="closeModalOverlay(event)">
-    <div class="modal-dialog">
-        <div class="modal-header fixit-bg">
-            <img src="logos/fix-it-fest.png" alt="Fix-It Fest">
-            <div>
-                <h3>Fix-It Fest</h3>
-                <div class="modal-tagline">Small hands. Golden solutions.</div>
-            </div>
-            <button class="modal-close" onclick="closeModal('fixit')">&times;</button>
-        </div>
-        <div class="modal-body">
-            <h4>Team Formation</h4>
-            <ul>
-                <li>Each team consists of <strong>5 members</strong></li>
-                <li>Grades 1&ndash;3: 4 students + 1 parent</li>
-                <li>Grades 4&ndash;6: 5 students</li>
-                <li>One team represents each section</li>
-                <li>Team selection should be completed at least <strong>2 weeks</strong> before the contest</li>
-            </ul>
-
-            <h4>Setup &amp; Environment</h4>
-            <ul>
-                <li><strong>Seating:</strong> Teams sit together at designated tables, quiz bee style</li>
-                <li><strong>Materials provided:</strong> Drawing paper or whiteboard, markers/colored pencils, writing materials</li>
-                <li><strong>Timer</strong> visible to all participants</li>
-                <li><strong>GRASPS Prompt Card/Slide</strong> displayed for every problem</li>
-            </ul>
-
-            <h4>Round Structure (3 Rounds)</h4>
-            <div class="step-block">
-                <strong>Step 1: GRASPS Prompt Presentation (1 minute)</strong><br>
-                Game Master presents a GRASPS-formatted problem covering Goal, Role, Audience, Situation, Product/Performance, and Standards. Prompt is displayed visually and read aloud. Teams may ask clarifying questions (30 seconds).
-            </div>
-            <div class="step-block">
-                <strong>Step 2: Solution Development (3 minutes)</strong><br>
-                Teams brainstorm and design within constraints. Must produce a <strong>labeled sketch</strong> (required) and a short <strong>pitch outline</strong> (recommended): Problem &rarr; Solution &rarr; How it works. When the timer ends, all work must stop immediately.
-            </div>
-            <div class="step-block">
-                <strong>Step 3: Presentation Order Randomization (1 minute)</strong><br>
-                Random selection determines presentation order (drawing numbers or digital randomizer).
-            </div>
-            <div class="step-block">
-                <strong>Step 4: Team Presentations (2 minutes per team)</strong><br>
-                Presenters follow the GRASPS Pitch Format in this fixed order:
-                <ol style="margin: 8px 0 0 20px;">
-                    <li><strong>Role:</strong> "We are the ___."</li>
-                    <li><strong>Goal:</strong> "Our goal is to ___."</li>
-                    <li><strong>Audience:</strong> "This helps ___ because ___."</li>
-                    <li><strong>Situation/Constraints:</strong> "We must ___ (constraints)."</li>
-                    <li><strong>Product/Performance:</strong> "Our solution is ___." + show sketch</li>
-                    <li><strong>How it works:</strong> Step &rarr; Step &rarr; Step</li>
-                    <li><strong>Success link:</strong> "We will succeed because ___ (tie to standards)."</li>
-                </ol>
-            </div>
-            <div class="step-block">
-                <strong>Step 5: Judging &amp; Scoring</strong><br>
-                Judges score using the GRASPS-aligned rubric. Scores recorded but not announced until the end.
-            </div>
-
-            <h4>Winner Determination</h4>
-            <ul>
-                <li>One winning team per grade level (Grades 1&ndash;6)</li>
-                <li>Highest cumulative score across all 3 rounds</li>
-                <li>Tiebreaker: judges deliberate or use bonus challenge</li>
-            </ul>
-
-            <div class="note-box">
+<div class="note-box">
                 <strong>Important:</strong> All solutions must be created during the allocated 3-minute discussion period. Teams start fresh with each problem &mdash; no prepared materials allowed.
             </div>
         </div>
