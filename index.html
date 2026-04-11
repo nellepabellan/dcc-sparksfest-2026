@@ -107,8 +107,6 @@
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            overflow: visible;
-            clip-path: inset(0 0 -100px 0);
         }
         .nav-inner {
             max-width: 1200px;
@@ -117,36 +115,29 @@
             align-items: center;
             gap: 4px;
             overflow-x: auto;
-            overflow-y: visible;
             scrollbar-width: none;
+            flex-wrap: wrap;
         }
         .nav-logo {
-            width: 0;
-            height: 46px;
+            max-height: 0;
             opacity: 0;
-            margin-right: 12px;
-            flex-shrink: 0;
-            transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-                        opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-                        margin 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow: visible;
-            order: -1;
-            position: relative;
-            z-index: 10;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            justify-content: center;
+            width: 100%;
         }
         .nav-logo img {
             width: 92px;
             height: 92px;
             border-radius: 16px;
             object-fit: cover;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
             filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+            margin: 8px 0 4px;
         }
         .nav-logo.visible {
-            width: 70px;
+            max-height: 120px;
             opacity: 1;
         }
         .nav-inner::-webkit-scrollbar { display: none; }
@@ -736,8 +727,7 @@
             .nav-bar { padding: 0 8px; }
             .nav-link { padding: 12px 12px; font-size: 0.78rem; }
             .nav-logo img { width: 72px; height: 72px; border-radius: 12px; }
-            .nav-logo { height: 36px; margin-right: 8px; }
-            .nav-logo.visible { width: 54px; }
+            .nav-logo.visible { max-height: 96px; }
 
             /* Container */
             .container { padding: 0 16px; }
@@ -834,13 +824,13 @@
 <!-- ========== NAVIGATION ========== -->
 <nav class="nav-bar">
     <div class="nav-inner">
+        <div class="nav-logo" id="navLogo">
+            <img src="logos/sparksfest-main.png" alt="DCC SparksFest 2026">
+        </div>
         <a href="#overview" class="nav-link">Overview</a>
         <a href="#program" class="nav-link">Program Flow</a>
         <a href="#judges" class="nav-link">Judges</a>
         <a href="#awards" class="nav-link">Awards</a>
-        <div class="nav-logo" id="navLogo">
-            <img src="logos/sparksfest-main.png" alt="DCC SparksFest 2026">
-        </div>
     </div>
 </nav>
 
