@@ -208,7 +208,9 @@
             display: flex;
             flex-direction: column;
         }
-        .event-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+        @media (hover: hover) {
+            .event-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+        }
         .event-card-header {
             padding: 20px;
             text-align: center;
@@ -852,7 +854,7 @@
                 <div class="event-card-body">
                     <div class="detail"><span class="label">Grades:</span><span class="value">1&ndash;12 (All Levels)</span></div>
                     <div class="detail"><span class="label">Schedule:</span><span class="value">Day 1 &amp; 2 (selling), Day 1 PM (judging)</span></div>
-                    <button class="btn-mechanics" onclick="openModal('booth')">View Full Mechanics <span class="arrow">&rarr;</span></button>
+                    <button class="btn-mechanics" data-modal="booth">View Full Mechanics <span class="arrow">&rarr;</span></button>
                 </div>
             </div>
 
@@ -867,7 +869,7 @@
                 <div class="event-card-body">
                     <div class="detail"><span class="label">Grades:</span><span class="value">1&ndash;6 (Elementary)</span></div>
                     <div class="detail"><span class="label">Schedule:</span><span class="value">Day 1 (AM: Gr 1&ndash;3, PM: Gr 4&ndash;6)</span></div>
-                    <button class="btn-mechanics" onclick="openModal('fixit')">View Full Mechanics <span class="arrow">&rarr;</span></button>
+                    <button class="btn-mechanics" data-modal="fixit">View Full Mechanics <span class="arrow">&rarr;</span></button>
                 </div>
             </div>
 
@@ -882,7 +884,7 @@
                 <div class="event-card-body">
                     <div class="detail"><span class="label">Grades:</span><span class="value">7&ndash;12 (JHS &amp; SHS)</span></div>
                     <div class="detail"><span class="label">Schedule:</span><span class="value">Day 2 (AM: JHS, PM: SHS)</span></div>
-                    <button class="btn-mechanics" onclick="openModal('pitch')">View Full Mechanics <span class="arrow">&rarr;</span></button>
+                    <button class="btn-mechanics" data-modal="pitch">View Full Mechanics <span class="arrow">&rarr;</span></button>
                 </div>
             </div>
 
@@ -897,7 +899,7 @@
                 <div class="event-card-body">
                     <div class="detail"><span class="label">Grades:</span><span class="value">7&ndash;12 (4 entries/section)</span></div>
                     <div class="detail"><span class="label">Schedule:</span><span class="value">Day 1 PM (3:00&ndash;5:00)</span></div>
-                    <button class="btn-mechanics" onclick="openModal('infogold')">View Full Mechanics <span class="arrow">&rarr;</span></button>
+                    <button class="btn-mechanics" data-modal="infogold">View Full Mechanics <span class="arrow">&rarr;</span></button>
                 </div>
             </div>
         </div>
@@ -1944,6 +1946,15 @@
         const map = { 'g13': 0, 'g46': 1 };
         tabs[map[grade]].classList.add('active');
     }
+
+    // Mechanics buttons — event delegation for reliable mobile taps
+    document.addEventListener('click', function(e) {
+        var btn = e.target.closest('.btn-mechanics');
+        if (btn && btn.dataset.modal) {
+            e.preventDefault();
+            openModal(btn.dataset.modal);
+        }
+    });
 
     // Smooth scrolling for nav links
     document.querySelectorAll('.nav-link').forEach(link => {
