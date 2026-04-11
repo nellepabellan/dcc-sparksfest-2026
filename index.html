@@ -108,6 +108,7 @@
             z-index: 100;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             overflow: visible;
+            clip-path: inset(0 0 -100px 0);
         }
         .nav-inner {
             max-width: 1200px;
@@ -138,8 +139,10 @@
             height: 92px;
             border-radius: 16px;
             object-fit: cover;
-            position: relative;
-            top: -4px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
             filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
         }
         .nav-logo.visible {
