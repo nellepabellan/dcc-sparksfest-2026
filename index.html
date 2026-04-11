@@ -741,10 +741,26 @@
             .section-header h2 { font-size: 1.6rem; }
             .section-header p { font-size: 0.9rem; }
 
-            /* Event cards */
-            .event-grid { grid-template-columns: 1fr; gap: 16px; }
-            .event-card-header img { width: 72px; height: 72px; border-radius: 12px; }
-            .event-card-header h3 { font-size: 1rem; }
+            /* Event cards - horizontal layout */
+            .event-grid { grid-template-columns: 1fr; gap: 12px; }
+            .event-card { border-radius: 14px; }
+            .event-card:hover { transform: none; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+            .event-card-header {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 16px 16px 10px;
+                text-align: left;
+            }
+            .event-card-header img { width: 52px; height: 52px; border-radius: 12px; margin-bottom: 0; flex-shrink: 0; }
+            .event-card-header h3 { font-size: 0.95rem; margin-bottom: 0; }
+            .event-card-header .tagline { font-size: 0.75rem; }
+            .event-badge { font-size: 0.65rem; padding: 3px 8px; margin-bottom: 2px; }
+            .event-card-body { padding: 0 16px 14px; }
+            .event-card-body .detail { margin-bottom: 6px; font-size: 0.82rem; gap: 6px; }
+            .event-card-body .detail .label { min-width: 68px; font-size: 0.78rem; }
+            .event-card-body .detail .value { font-size: 0.82rem; }
+            .btn-mechanics { padding: 8px 14px; font-size: 0.78rem; margin-top: 4px; }
 
             /* Timeline */
             .timeline { padding-left: 28px; }
@@ -800,7 +816,7 @@
             .hero-logo { width: 100px; height: 100px; }
             .hero .subtitle { font-size: 0.85rem; }
             .nav-link { padding: 10px 8px; font-size: 0.72rem; }
-            .event-card-header img { width: 60px; height: 60px; }
+            .event-card-header img { width: 44px; height: 44px; border-radius: 10px; }
             #awards .container > div:last-child { grid-template-columns: 1fr; }
             .grasps-acronym { grid-template-columns: repeat(3, 1fr) !important; gap: 4px !important; }
         }
