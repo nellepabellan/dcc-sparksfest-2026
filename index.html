@@ -328,6 +328,9 @@
             margin-bottom: 8px;
         }
         .judges-header-banner p { opacity: 0.8; max-width: 600px; margin: 0 auto; }
+        .judges-panel-title { margin: 40px 0 6px; color: var(--white); font-size: 1.2rem; text-align: left; }
+        .judges-panel-title:first-of-type { margin-top: 32px; }
+        .judges-panel-subtitle { margin-bottom: 20px; color: rgba(255,255,255,0.6); font-size: 0.88rem; text-align: left; max-width: none; opacity: 1; }
         .judges-stats {
             display: flex;
             justify-content: center;
@@ -1099,11 +1102,10 @@
                     <div class="stat-label">Days</div>
                 </div>
             </div>
-        </div>
 
         <!-- Panel A: Fix-It Fest + InnoPitch (shared judges) -->
-        <h3 style="margin-bottom: 6px; color: var(--dark); font-size: 1.2rem;">Panel A &mdash; Fix-It Fest &amp; InnoPitch</h3>
-        <p style="margin-bottom: 20px; color: var(--gray-500); font-size: 0.88rem;">Day 1: Fix-It Fest Gr 1&ndash;3 (AM) &amp; Gr 4&ndash;6 (PM) &bull; Day 2: InnoPitch JHS (AM) &amp; SHS (PM)</p>
+        <h3 class="judges-panel-title">Panel A &mdash; Fix-It Fest &amp; InnoPitch</h3>
+        <p class="judges-panel-subtitle">Day 1: Fix-It Fest Gr 1&ndash;3 (AM) &amp; Gr 4&ndash;6 (PM) &bull; Day 2: InnoPitch JHS (AM) &amp; SHS (PM)</p>
 
         <div class="judge-profiles-grid">
             <!-- Judge 1 -->
@@ -1169,8 +1171,8 @@
         </div>
 
         <!-- Panel B: Golden Booth Brawl + InfoGold -->
-        <h3 style="margin: 40px 0 6px; color: var(--dark); font-size: 1.2rem;">Panel B &mdash; Golden Booth Brawl &amp; InfoGold</h3>
-        <p style="margin-bottom: 20px; color: var(--gray-500); font-size: 0.88rem;">Day 1: Booth Judging &amp; InfoGold Gallery Walk (3:00&ndash;5:00 PM)</p>
+        <h3 class="judges-panel-title">Panel B &mdash; Golden Booth Brawl &amp; InfoGold</h3>
+        <p class="judges-panel-subtitle">Day 1: Booth Judging &amp; InfoGold Gallery Walk (3:00&ndash;5:00 PM)</p>
 
         <div class="judge-profiles-grid">
             <!-- Judge 4 -->
@@ -1226,27 +1228,28 @@
         </div>
 
         <!-- Assignment Summary -->
-        <div style="margin-top: 16px; background: var(--gray-50); border-radius: 12px; padding: 24px; border: 1px solid var(--gray-200);">
-            <h4 style="margin-bottom: 16px; color: var(--dark);">Assignment Summary</h4>
+        <div style="margin-top: 16px; background: rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; border: 1px solid rgba(255,255,255,0.12);">
+            <h4 style="margin-bottom: 16px; color: var(--white);">Assignment Summary</h4>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <span class="assignment-tag tag-fixit" style="font-size: 0.78rem;"><span class="tag-dot"></span> Fix-It Fest</span>
-                    <span style="font-size: 0.88rem; color: var(--gray-700);">2 judges &mdash; Day 1 (AM &amp; PM)</span>
+                    <span style="font-size: 0.88rem; color: rgba(255,255,255,0.7);">2 judges &mdash; Day 1 (AM &amp; PM)</span>
                 </div>
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <span class="assignment-tag tag-pitch" style="font-size: 0.78rem;"><span class="tag-dot"></span> InnoPitch</span>
-                    <span style="font-size: 0.88rem; color: var(--gray-700);">3 judges &mdash; Day 2 (AM &amp; PM)</span>
+                    <span style="font-size: 0.88rem; color: rgba(255,255,255,0.7);">3 judges &mdash; Day 2 (AM &amp; PM)</span>
                 </div>
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <span class="assignment-tag tag-booth" style="font-size: 0.78rem;"><span class="tag-dot"></span> Booth Brawl</span>
-                    <span style="font-size: 0.88rem; color: var(--gray-700);">3 judges &mdash; Day 1 PM</span>
+                    <span style="font-size: 0.88rem; color: rgba(255,255,255,0.7);">3 judges &mdash; Day 1 PM</span>
                 </div>
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <span class="assignment-tag tag-infogold" style="font-size: 0.78rem;"><span class="tag-dot"></span> InfoGold</span>
-                    <span style="font-size: 0.88rem; color: var(--gray-700);">3 judges &mdash; Day 1 PM</span>
+                    <span style="font-size: 0.88rem; color: rgba(255,255,255,0.7);">3 judges &mdash; Day 1 PM</span>
                 </div>
             </div>
         </div>
+        </div><!-- end judges-header-banner -->
     </div>
 </section>
 
@@ -1354,34 +1357,31 @@
             <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--fixit-color);">
                 <h4 style="color: var(--fixit-color); margin-bottom: 16px;">Fix-It Fest</h4>
                 <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
-                    <li>Winner per grade level (Grades 1&ndash;6)</li>
-                    <li>Most Creative Solution</li>
-                    <li>Best Teamwork</li>
-                    <li>Certificates for all participants</li>
+                    <li>Champion and 2 Runner-Ups (per bracket)</li>
+                    <li>Certificates for all participating teams</li>
                 </ul>
+                <p style="margin-top: 14px; font-size: 0.78rem; color: var(--gray-500); background: var(--white); border-radius: 8px; padding: 10px 14px; border: 1px solid var(--gray-200);"><strong style="color: var(--gray-700);">Brackets:</strong> Elementary &bull; Junior High &bull; Senior High</p>
             </div>
 
             <!-- Booth Awards -->
             <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--booth-color);">
                 <h4 style="color: var(--booth-color); margin-bottom: 16px;">Golden Booth Brawl</h4>
                 <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
-                    <li>Highest Profit (per zone)</li>
+                    <li>Highest Profit</li>
                     <li>Best Innovative Product/Service</li>
                     <li>Most Innovative Booth Design</li>
                     <li>Best Ad &amp; Sales Talk</li>
                 </ul>
+                <p style="margin-top: 14px; font-size: 0.78rem; color: var(--gray-500); background: var(--white); border-radius: 8px; padding: 10px 14px; border: 1px solid var(--gray-200);"><strong style="color: var(--gray-700);">Brackets:</strong> Elementary &bull; Junior High &bull; Senior High</p>
             </div>
 
             <!-- InnoPitch Awards -->
             <div style="background: var(--gray-50); border-radius: 14px; padding: 28px; border-top: 4px solid var(--pitch-color);">
                 <h4 style="color: var(--pitch-color); margin-bottom: 16px;">DCCian InnoPitch</h4>
                 <ul style="margin-left: 18px; line-height: 2; color: var(--gray-700); font-size: 0.9rem;">
-                    <li>Champion, 1st &amp; 2nd Runner-Up (per bracket)</li>
-                    <li>Best Innovation</li>
-                    <li>Best Social Impact</li>
-                    <li>Best Pitch Delivery</li>
-                    <li>People's Choice (optional)</li>
+                    <li>Champion and 2 Runner-Ups (per bracket)</li>
                 </ul>
+                <p style="margin-top: 14px; font-size: 0.78rem; color: var(--gray-500); background: var(--white); border-radius: 8px; padding: 10px 14px; border: 1px solid var(--gray-200);"><strong style="color: var(--gray-700);">Brackets:</strong> Elementary &bull; Junior High &bull; Senior High</p>
             </div>
 
             <!-- InfoGold Awards -->
