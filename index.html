@@ -318,40 +318,17 @@
             background: linear-gradient(135deg, var(--dark), var(--accent-blue));
             color: var(--white);
             border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 40px;
-            text-align: center;
+            padding: 32px;
+            margin-bottom: 0;
         }
-        .judges-header-banner h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            margin-bottom: 8px;
-        }
-        .judges-header-banner p { opacity: 0.8; max-width: 600px; margin: 0 auto; }
-        .judges-panel-title { margin: 40px 0 6px; color: var(--white); font-size: 1.2rem; text-align: left; }
-        .judges-panel-title:first-of-type { margin-top: 32px; }
-        .judges-panel-subtitle { margin-bottom: 20px; color: rgba(255,255,255,0.6); font-size: 0.88rem; text-align: left; max-width: none; opacity: 1; }
-        .judges-stats {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-top: 24px;
-            flex-wrap: wrap;
-        }
-        .judges-stat {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 12px;
-            padding: 14px 28px;
-            text-align: center;
-        }
-        .judges-stat .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--gold-light); }
-        .judges-stat .stat-label { font-size: 0.78rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.5px; }
+        .judges-panel-title { margin: 0 0 6px; color: var(--white); font-size: 1.2rem; text-align: left; }
+        .judges-panel-title ~ .judges-panel-title { margin-top: 28px; }
+        .judges-panel-subtitle { margin-bottom: 16px; color: rgba(255,255,255,0.6); font-size: 0.88rem; text-align: left; opacity: 1; }
 
         .judge-profiles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
             margin-bottom: 32px;
         }
         .judge-profile {
@@ -774,12 +751,10 @@
             .day-tab { padding: 10px 20px; font-size: 0.85rem; }
 
             /* Judges */
-            .judges-header-banner { padding: 28px 20px; }
-            .judges-header-banner h3 { font-size: 1.4rem; }
-            .judges-stats { gap: 16px; }
-            .judges-stat { padding: 10px 20px; }
-            .judges-stat .stat-num { font-size: 1.4rem; }
-            .judge-profiles-grid { grid-template-columns: 1fr; gap: 14px; }
+            .judges-header-banner { padding: 20px 16px; }
+            .judges-panel-title { font-size: 1.05rem; }
+            .judges-panel-subtitle { font-size: 0.8rem; }
+            .judge-profiles-grid { grid-template-columns: 1fr; gap: 12px; }
             .judge-profile-top { padding: 16px 16px 0; gap: 12px; }
             .judge-avatar { width: 44px; height: 44px; font-size: 1.1rem; }
             .judge-assignments { padding: 10px 16px 16px; }
@@ -1086,22 +1061,6 @@
         </div>
 
         <div class="judges-header-banner">
-            <h3>SparksFest 2026 Judges</h3>
-            <p>Our distinguished panel of educators, administrators, and industry professionals ensuring fair and expert evaluation across all events.</p>
-            <div class="judges-stats">
-                <div class="judges-stat">
-                    <div class="stat-num">6</div>
-                    <div class="stat-label">Total Judges</div>
-                </div>
-                <div class="judges-stat">
-                    <div class="stat-num">4</div>
-                    <div class="stat-label">Events Covered</div>
-                </div>
-                <div class="judges-stat">
-                    <div class="stat-num">2</div>
-                    <div class="stat-label">Days</div>
-                </div>
-            </div>
 
         <!-- Panel A: Fix-It Fest + InnoPitch (shared judges) -->
         <h3 class="judges-panel-title">Panel A &mdash; Fix-It Fest &amp; InnoPitch</h3>
@@ -1227,28 +1186,6 @@
             </div>
         </div>
 
-        <!-- Assignment Summary -->
-        <div style="margin-top: 16px; background: rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; border: 1px solid rgba(255,255,255,0.12);">
-            <h4 style="margin-bottom: 16px; color: var(--white);">Assignment Summary</h4>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span class="assignment-tag tag-fixit" style="font-size: 0.78rem;"><span class="tag-dot"></span> Fix-It Fest</span>
-                    <span style="font-size: 0.88rem; color: rgba(255,255,255,0.7);">2 judges &mdash; Day 1 (AM &amp; PM)</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span class="assignment-tag tag-pitch" style="font-size: 0.78rem;"><span class="tag-dot"></span> InnoPitch</span>
-                    <span style="font-size: 0.88rem; color: rgba(255,255,255,0.7);">3 judges &mdash; Day 2 (AM &amp; PM)</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span class="assignment-tag tag-booth" style="font-size: 0.78rem;"><span class="tag-dot"></span> Booth Brawl</span>
-                    <span style="font-size: 0.88rem; color: rgba(255,255,255,0.7);">3 judges &mdash; Day 1 PM</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span class="assignment-tag tag-infogold" style="font-size: 0.78rem;"><span class="tag-dot"></span> InfoGold</span>
-                    <span style="font-size: 0.88rem; color: rgba(255,255,255,0.7);">3 judges &mdash; Day 1 PM</span>
-                </div>
-            </div>
-        </div>
         </div><!-- end judges-header-banner -->
     </div>
 </section>
