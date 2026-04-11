@@ -107,6 +107,7 @@
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            overflow: visible;
         }
         .nav-inner {
             max-width: 1200px;
@@ -114,8 +115,9 @@
             display: flex;
             align-items: center;
             gap: 4px;
-            overflow-x: auto;
+            overflow: visible;
             scrollbar-width: none;
+            height: 48px;
         }
         .nav-logo {
             width: 0;
@@ -133,6 +135,8 @@
             border-radius: 16px;
             object-fit: cover;
             filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+            position: relative;
+            top: 4px;
         }
         .nav-logo.visible {
             width: 92px;
